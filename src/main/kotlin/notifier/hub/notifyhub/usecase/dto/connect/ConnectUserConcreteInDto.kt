@@ -1,4 +1,4 @@
-package notifier.hub.notifyhub.usecase.dto
+package notifier.hub.notifyhub.usecase.dto.connect
 
 import java.util.*
 

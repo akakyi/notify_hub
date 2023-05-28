@@ -10,7 +10,7 @@ import javax.persistence.Table
 @Table(name = "user")
 open class UserEntity(
     @Id
-    @Column(name = "global_user_id")
+    @field:Column(name = "global_user_id")
     val globalUserId: UUID,
 
     val login: String,

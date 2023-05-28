@@ -3,7 +3,7 @@ package notifier.hub.notifyhub.usecase.connect
 import notifier.hub.notifyhub.dataprovider.amqp.usercreation.CreateTelegramUserDataProvider
 import notifier.hub.notifyhub.dataprovider.amqp.usercreation.CreateTelegramUserPayload
 import notifier.hub.notifyhub.model.ChannelType
-import notifier.hub.notifyhub.usecase.dto.ConnectUserConcreteInDto
+import notifier.hub.notifyhub.usecase.dto.connect.ConnectUserConcreteInDto
 import org.springframework.stereotype.Component
 
 @Component

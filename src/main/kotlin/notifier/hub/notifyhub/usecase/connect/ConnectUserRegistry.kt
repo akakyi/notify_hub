@@ -1,7 +1,7 @@
 package notifier.hub.notifyhub.usecase.connect
 
-import notifier.hub.notifyhub.usecase.dto.ConnectUserConcreteInDto
-import notifier.hub.notifyhub.usecase.dto.ConnectUserInChannelRegistryInDto
+import notifier.hub.notifyhub.usecase.dto.connect.ConnectUserConcreteInDto
+import notifier.hub.notifyhub.usecase.dto.connect.ConnectUserInChannelRegistryInDto
 import org.springframework.stereotype.Service
 
 @Service

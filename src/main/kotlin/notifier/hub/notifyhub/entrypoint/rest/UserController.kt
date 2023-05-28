@@ -5,7 +5,7 @@ import notifier.hub.notifyhub.entrypoint.dto.CreateNewUserRequest
 import notifier.hub.notifyhub.entrypoint.dto.CreateNewUserResponse
 import notifier.hub.notifyhub.usecase.CreateNewUserUseCase
 import notifier.hub.notifyhub.usecase.connect.ConnectUserUseCase
-import notifier.hub.notifyhub.usecase.dto.ConnectUserInDto
+import notifier.hub.notifyhub.usecase.dto.connect.ConnectUserInDto
 import notifier.hub.notifyhub.usecase.dto.CreateNewUserInDto
 import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RequestMapping
