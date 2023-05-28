@@ -4,6 +4,8 @@ import notifier.hub.notifyhub.entrypoint.dto.ConnectUserRequest
 import notifier.hub.notifyhub.entrypoint.dto.CreateNewUserRequest
 import notifier.hub.notifyhub.entrypoint.dto.CreateNewUserResponse
 import notifier.hub.notifyhub.usecase.CreateNewUserUseCase
+import notifier.hub.notifyhub.usecase.connect.ConnectUserUseCase
+import notifier.hub.notifyhub.usecase.dto.ConnectUserInDto
 import notifier.hub.notifyhub.usecase.dto.CreateNewUserInDto
 import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RequestMapping
@@ -12,7 +14,8 @@ import org.springframework.web.bind.annotation.RestController
 @RestController
 @RequestMapping(value = ["/user"])
 class UserController(
-    private val createNewUserUseCase: CreateNewUserUseCase
+    private val createNewUserUseCase: CreateNewUserUseCase,
+    private val connectUserUseCase: ConnectUserUseCase
 ) {
 
     @PostMapping("/create")
@@ -32,7 +35,13 @@ class UserController(
 
     @PostMapping("/connect")
     fun connectUser(request: ConnectUserRequest) {
-
+        connectUserUseCase.execute(
+            ConnectUserInDto(
+                globalUserId = request.globalUserId,
+                userInChannelId = request.channelUserId,
+                channelType = request.channelType
+            )
+        )
     }
 
 }

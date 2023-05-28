@@ -2,7 +2,7 @@ package notifier.hub.notifyhub.usecase.dto
 
 import java.util.*
 
-data class ConnectUserChannelInDto(
+data class ConnectUserConcreteInDto(
     val globalUserId: UUID,
-    val userChannelId: String
+    val userInChannelId: String
 )

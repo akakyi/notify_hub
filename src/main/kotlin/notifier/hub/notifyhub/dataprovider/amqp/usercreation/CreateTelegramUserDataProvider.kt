@@ -1,4 +1,4 @@
-package notifier.hub.notifyhub.dataprovider.amqp.channelcreation
+package notifier.hub.notifyhub.dataprovider.amqp.usercreation
 
 import org.springframework.amqp.core.MessageProperties
 import org.springframework.amqp.rabbit.core.RabbitTemplate
@@ -10,10 +10,10 @@ import org.springframework.stereotype.Component
 class CreateTelegramUserDataProvider(
     private val rabbitTemplate: RabbitTemplate,
     private val messageConverter: MessageConverter,
-    @Value("\${amqp.connect.key}") private val channelRoutingKey: String
+    @Value("\${amqp.create.telegram.key}") private val channelRoutingKey: String
 ) {
 
-    fun sendChannelData(payload: CreateUserPayload) {
+    fun sendUserData(payload: CreateTelegramUserPayload) {
         rabbitTemplate.send(
             channelRoutingKey,
             messageConverter.toMessage(
